@@ -1,6 +1,7 @@
 global using BlazorWorkingScaffold.Shared;
 global using Microsoft.EntityFrameworkCore;
-using BlazorWorkingScaffold.Server.Data;
+global using BlazorWorkingScaffold.Server.Data;
+global using BlazorWorkingScaffold.Server.Services.EmployeeService;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });  //Registered the DataContext
-
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();    //Register the Interface and implication class...
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
