@@ -1,0 +1,27 @@
+﻿@page "/employees"
+@inject IEmployeeService EmployeeService
+
+<PageTitle>Employees</PageTitle>
+<h3>Employees</h3>
+
+@if (EmployeeService.Employees.Count <= 0)
+{
+    <span>Loading...</span>
+}
+else
+{
+    <ul>
+        @foreach (var employee in EmployeeService.Employees)
+       {
+           <li>@employee.FirstName - @employee.LastName - @employee.Position</li>
+       }
+    </ul>
+}
+
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await EmployeeService.GetEmployees();
+    }
+}

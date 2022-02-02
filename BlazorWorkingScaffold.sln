@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWorkingScaffold.Server", "BlazorWorkingScaffold\Server\BlazorWorkingScaffold.Server.csproj", "{9BD25A69-DD55-4FB5-9186-3C95BA4C1DA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWorkingScaffold.Server", "BlazorWorkingScaffold\Server\BlazorWorkingScaffold.Server.csproj", "{9BD25A69-DD55-4FB5-9186-3C95BA4C1DA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWorkingScaffold.Client", "BlazorWorkingScaffold\Client\BlazorWorkingScaffold.Client.csproj", "{16D24FB9-6221-4CF1-BD9E-60203C751317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWorkingScaffold.Client", "BlazorWorkingScaffold\Client\BlazorWorkingScaffold.Client.csproj", "{16D24FB9-6221-4CF1-BD9E-60203C751317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWorkingScaffold.Shared", "BlazorWorkingScaffold\Shared\BlazorWorkingScaffold.Shared.csproj", "{DBE7CED3-E807-4177-A038-C88D8EDAF72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWorkingScaffold.Shared", "BlazorWorkingScaffold\Shared\BlazorWorkingScaffold.Shared.csproj", "{DBE7CED3-E807-4177-A038-C88D8EDAF72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
