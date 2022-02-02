@@ -15,7 +15,12 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });  //Registered the DataContext
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();    //Register the Interface and implication class...
+
+builder.Services.AddEndpointsApiExplorer(); //Added to use Swagger
+builder.Services.AddSwaggerGen();           //Added to use Swagger
+
 var app = builder.Build();
+app.UseSwaggerUI();                         //Added to use Swagger
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -29,6 +34,7 @@ else
     app.UseHsts();
 }
 
+app.UseSwagger();                       //Added to use Swagger
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
